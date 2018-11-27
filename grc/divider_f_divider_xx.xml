@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Frequency Divider Block:
+##	all types, 1 output, 1 input & const
+###################################################
+ -->
+<block>
+	<name>Frequency Divider</name>
+	<key>divider_f_divider_xx</key>
+	<category>Frequency Dividers</category>
+	<import>import divider</import>
+	<make>divider.f_divider_$(type.fcn)($count)</make>
+	<callback>set_k($const)</callback>
+	<param>
+		<name>IO Type</name>
+		<key>type</key>
+		<type>enum</type>
+		<option>
+			<name>Float</name>
+			<key>float</key>
+			<opt>fcn:ff</opt>
+		</option>
+		<option>
+			<name>Int</name>
+			<key>int</key>
+			<opt>fcn:ii</opt>
+		</option>
+		<option>
+			<name>Short</name>
+			<key>short</key>
+			<opt>fcn:ss</opt>
+		</option>
+	</param>
+	<param>
+		<name>Count</name>
+		<key>count</key>
+		<value>2</value>
+		<type>int</type>
+	</param>
+	<sink>
+		<name>in</name>
+		<type>$type</type>
+	</sink>
+	<source>
+		<name>out</name>
+		<type>$type</type>
+	</source>
+</block>
