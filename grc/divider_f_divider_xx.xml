@@ -11,7 +11,7 @@
 	<category>Frequency Dividers</category>
 	<import>import divider</import>
 	<make>divider.f_divider_$(type.fcn)($count)</make>
-	<callback>set_k($const)</callback>
+	<callback>set_k($count)</callback>
 	<param>
 		<name>IO Type</name>
 		<key>type</key>
