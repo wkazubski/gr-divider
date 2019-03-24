@@ -46,7 +46,17 @@ namespace gr {
        * class. divider::f_divider_ss::make is the public interface for
        * creating new instances.
        */
-      static sptr make(int count);
+      static sptr make(int k);
+
+      /*!
+       * \brief Return division ratio
+       */
+      virtual int k() const = 0;
+
+      /*!
+       * \brief Set division ratio
+       */
+      virtual void set_k(int k) = 0;
     };
 
   } // namespace divider
