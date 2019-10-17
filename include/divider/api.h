@@ -26,9 +26,9 @@
 #include <gnuradio/attributes.h>
 
 #ifdef gnuradio_divider_EXPORTS
-#  define DIVIDER_API __GR_ATTR_EXPORT
+#define DIVIDER_API __GR_ATTR_EXPORT
 #else
-#  define DIVIDER_API __GR_ATTR_IMPORT
+#define DIVIDER_API __GR_ATTR_IMPORT
 #endif
 
 #endif /* INCLUDED_DIVIDER_API_H */

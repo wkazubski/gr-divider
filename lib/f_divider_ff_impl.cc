@@ -1,17 +1,17 @@
 /* -*- c++ -*- */
-/* 
- * Copyright 2018 Wojciech Kazubski.
- * 
+/*
+ * Copyright 2019 Wojciech Kazubski.
+ *
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 3, or (at your option)
  * any later version.
- * 
+ *
  * This software is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this software; see the file COPYING.  If not, write to
  * the Free Software Foundation, Inc., 51 Franklin Street,
@@ -35,6 +35,7 @@ namespace gr {
         (new f_divider_ff_impl(count));
     }
 
+
     /*
      * The private constructor
      */
@@ -42,7 +43,7 @@ namespace gr {
       : gr::sync_block("f_divider_ff",
               gr::io_signature::make(1, 1, sizeof(float)),
               gr::io_signature::make(1, 1, sizeof(float))),
-        ct_k(count)
+              ct_k(count)
     {
       set_history(2);
     }
@@ -89,7 +90,6 @@ namespace gr {
       // Tell runtime system how many output items we produced.
       return noutput_items;
     }
-
 
   } /* namespace divider */
 } /* namespace gr */

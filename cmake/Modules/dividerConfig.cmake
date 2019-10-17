@@ -22,9 +22,10 @@ FIND_LIBRARY(
           /usr/local/lib64
           /usr/lib
           /usr/lib64
-)
+          )
+
+include("${CMAKE_CURRENT_LIST_DIR}/dividerTarget.cmake")
 
 INCLUDE(FindPackageHandleStandardArgs)
 FIND_PACKAGE_HANDLE_STANDARD_ARGS(DIVIDER DEFAULT_MSG DIVIDER_LIBRARIES DIVIDER_INCLUDE_DIRS)
 MARK_AS_ADVANCED(DIVIDER_LIBRARIES DIVIDER_INCLUDE_DIRS)
-

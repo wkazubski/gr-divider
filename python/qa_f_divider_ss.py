@@ -23,7 +23,7 @@ from gnuradio import gr, gr_unittest
 from gnuradio import blocks
 import divider_swig as divider
 
-class qa_f_divider_ff(gr_unittest.TestCase):
+class qa_f_divider_ss(gr_unittest.TestCase):
 
     def setUp(self):
         self.tb = gr.top_block()
@@ -35,7 +35,7 @@ class qa_f_divider_ff(gr_unittest.TestCase):
         src_data = (1, -1, 1, -1, 1, -1, 1, -1, -1, -1)
         expected_result = (-1, 1, 1, -1, -1, 1, 1, -1, -1, -1)
         src = blocks.vector_source_f(src_data)
-        sqr = divider.f_divider_ff(2)
+        sqr = divider.f_divider_ss(2)
         dst = blocks.vector_sink_f()
         self.tb.connect(src, sqr)
         self.tb.connect(sqr, dst)
@@ -47,7 +47,7 @@ class qa_f_divider_ff(gr_unittest.TestCase):
         src_data = (1, -1, 1, -1, 1, -1, -1, -1)
         expected_result = (-1, 1, 1, 1, -1, -1, -1, -1)
         src = blocks.vector_source_f(src_data)
-        sqr = divider.f_divider_ff(3)
+        sqr = divider.f_divider_ss(3)
         dst = blocks.vector_sink_f()
         self.tb.connect(src, sqr)
         self.tb.connect(sqr, dst)
@@ -57,4 +57,4 @@ class qa_f_divider_ff(gr_unittest.TestCase):
 
 
 if __name__ == '__main__':
-    gr_unittest.run(qa_f_divider_ff)
+    gr_unittest.run(qa_f_divider_ss)
