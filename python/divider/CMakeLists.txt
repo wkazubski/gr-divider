@@ -14,7 +14,7 @@ if(NOT PYTHONINTERP_FOUND)
     return()
 endif()
 
-add_subdirectory(divider)
+add_subdirectory(bindings)
 
 ########################################################################
 # Install python sources
@@ -31,7 +31,11 @@ GR_PYTHON_INSTALL(
 include(GrTest)
 
 set(GR_TEST_TARGET_DEPS gnuradio-divider)
-GR_ADD_TEST(qa_f_divider_ff ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_f_divider_ff.py)
-GR_ADD_TEST(qa_f_divider_bb ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_f_divider_bb.py)
-GR_ADD_TEST(qa_f_divider_ii ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_f_divider_ii.py)
-GR_ADD_TEST(qa_f_divider_ss ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_f_divider_ss.py)
+
+# Create a package directory that tests can import. It includes everything
+# from `python/`.
+add_custom_target(
+  copy_module_for_tests ALL
+  COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}
+          ${CMAKE_BINARY_DIR}/test_modules/divider/
+)

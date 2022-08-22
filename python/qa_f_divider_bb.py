@@ -21,7 +21,6 @@
 
 from gnuradio import gr, gr_unittest
 from gnuradio import blocks
-import divider_swig as divider
 
 class qa_f_divider_bb(gr_unittest.TestCase):
 
