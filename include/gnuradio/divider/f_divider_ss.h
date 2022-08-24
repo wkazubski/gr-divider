@@ -10,6 +10,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+#ifndef INCLUDED_DIVIDER_F_DIVIDER_SS_H
 #define INCLUDED_DIVIDER_F_DIVIDER_SS_H
 
 #include <gnuradio/divider/api.h>
