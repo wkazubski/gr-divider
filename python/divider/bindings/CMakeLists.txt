@@ -39,7 +39,7 @@ GR_PYBIND_MAKE_OOT(divider
 # copy bindings extension for use in QA test module
 add_custom_command(TARGET divider_python POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:divider_python>
-    ${CMAKE_BINARY_DIR}/test_modules/divider/
+    ${CMAKE_BINARY_DIR}/test_modules/gnuradio/divider/
 )
 
-install(TARGETS divider_python DESTINATION ${GR_PYTHON_DIR}/divider COMPONENT pythonapi)
+install(TARGETS divider_python DESTINATION ${GR_PYTHON_DIR}/gnuradio/divider COMPONENT pythonapi)

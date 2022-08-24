@@ -10,10 +10,9 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-#ifndef INCLUDED_DIVIDER_F_DIVIDER_BB_H
-#define INCLUDED_DIVIDER_F_DIVIDER_BB_H
+#define INCLUDED_DIVIDER_F_DIVIDER_SS_H
 
-#include <divider/api.h>
+#include <gnuradio/divider/api.h>
 #include <gnuradio/sync_block.h>
 
 namespace gr {
@@ -24,17 +23,17 @@ namespace gr {
      * \ingroup divider
      *
      */
-    class DIVIDER_API f_divider_bb : virtual public gr::sync_block
+    class DIVIDER_API f_divider_ss : virtual public gr::sync_block
     {
      public:
-      typedef std::shared_ptr<f_divider_bb> sptr;
+      typedef std::shared_ptr<f_divider_ss> sptr;
 
       /*!
-       * \brief Return a shared_ptr to a new instance of divider::f_divider_bb.
+       * \brief Return a shared_ptr to a new instance of divider::f_divider_ss.
        *
-       * To avoid accidental use of raw pointers, divider::f_divider_bb's
+       * To avoid accidental use of raw pointers, divider::f_divider_ss's
        * constructor is in a private implementation
-       * class. divider::f_divider_bb::make is the public interface for
+       * class. divider::f_divider_ss::make is the public interface for
        * creating new instances.
        */
       static sptr make(int count);
@@ -53,5 +52,5 @@ namespace gr {
   } // namespace divider
 } // namespace gr
 
-#endif /* INCLUDED_DIVIDER_F_DIVIDER_BB_H */
+#endif /* INCLUDED_DIVIDER_F_DIVIDER_SS_H */
 

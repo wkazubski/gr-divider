@@ -13,7 +13,7 @@
 #ifndef INCLUDED_DIVIDER_F_DIVIDER_FF_IMPL_H
 #define INCLUDED_DIVIDER_F_DIVIDER_FF_IMPL_H
 
-#include <divider/f_divider_ff.h>
+#include <gnuradio/divider/f_divider_ff.h>
 
 namespace gr {
   namespace divider {
