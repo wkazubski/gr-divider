@@ -16,7 +16,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0) */
 /* BINDTOOL_USE_PYGCCXML(0) */
 /* BINDTOOL_HEADER_FILE(f_divider_ff.h) */
-/* BINDTOOL_HEADER_FILE_HASH(5c81060e91f99d2039a44ffe89fe1aef) */
+/* BINDTOOL_HEADER_FILE_HASH(7012e6b8608addb53c52e0d9c80a69f6) */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -25,7 +25,7 @@
 
 namespace py = pybind11;
 
-#include <divider/f_divider_ff.h>
+#include <gnuradio/divider/f_divider_ff.h>
 // pydoc.h is automatically generated in the build directory
 #include <f_divider_ff_pydoc.h>
 
