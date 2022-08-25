@@ -42,4 +42,4 @@ add_custom_command(TARGET divider_python POST_BUILD
     ${CMAKE_BINARY_DIR}/test_modules/gnuradio/divider/
 )
 
-install(TARGETS divider_python DESTINATION ${GR_PYTHON_DIR}/gnuradio/divider COMPONENT pythonapi)
+install(TARGETS divider_python DESTINATION ${GR_PYTHON_DIR}/divider COMPONENT pythonapi)
