@@ -29,6 +29,10 @@ include(GrPybind)
 ########################################################################
 
 list(APPEND divider_python_files
+    f_divider_bb_python.cc
+    f_divider_ff_python.cc
+    f_divider_ii_python.cc
+    f_divider_ss_python.cc
     python_bindings.cc)
 
 GR_PYBIND_MAKE_OOT(divider

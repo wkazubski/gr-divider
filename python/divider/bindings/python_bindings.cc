@@ -21,6 +21,10 @@ namespace py = pybind11;
 // Please do not delete
 /**************************************/
 // BINDING_FUNCTION_PROTOTYPES(
+    void bind_f_divider_bb(py::module& m);
+    void bind_f_divider_ff(py::module& m);
+    void bind_f_divider_ii(py::module& m);
+    void bind_f_divider_ss(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -49,5 +53,9 @@ PYBIND11_MODULE(divider_python, m)
     // Please do not delete
     /**************************************/
     // BINDING_FUNCTION_CALLS(
+    bind_f_divider_bb(m);
+    bind_f_divider_ff(m);
+    bind_f_divider_ii(m);
+    bind_f_divider_ss(m);
     // ) END BINDING_FUNCTION_CALLS
 }
